@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Kore Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-900 flex flex-col min-h-screen">
+
+    <nav class="flex justify-between items-center px-6 md:px-12 py-5 absolute top-0 w-full z-50 bg-[#1c1c24]/90 backdrop-blur-md">
+        <a href="index.html" class="flex items-center gap-3 z-50">
+            <div class="w-11 h-11 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-[#5c67ff] font-black text-2xl md:text-3xl shadow-lg">K</div>
+            <span class="text-2xl md:text-[28px] font-extrabold text-white tracking-tight">Kore Digital</span>
+        </a>
+        <div class="hidden md:flex gap-8 font-semibold text-white/90 text-sm uppercase tracking-widest text-xs">
+            <a href="about.html" class="hover:text-[#5c67ff] transition">About Us</a>
+            <a href="index.html#services" class="hover:text-[#5c67ff] transition">Services</a>
+            <a href="contact.html" class="hover:text-[#5c67ff] transition">Contact</a>
+        </div>
+        <a href="contact.html" class="hidden md:inline-block btn-primary px-8 py-3 rounded-xl font-bold text-sm shadow-lg">Let's Talk</a>
+        <button id="mobile-menu-btn" class="md:hidden text-white z-50"><i data-lucide="menu" class="w-8 h-8"></i></button>
+    </nav>
+
+     <div id="mobile-menu" class="fixed inset-0 bg-[#1c1c24] z-40 hidden flex-col justify-center items-center gap-8 text-2xl font-bold text-white transition-opacity duration-300">
+        <a href="about.html" class="hover:text-[#5c67ff]">About Us</a>
+        <a href="index.html#services" class="hover:text-[#5c67ff]">Services</a>
+        <a href="contact.html" class="hover:text-[#5c67ff]">Contact</a>
+        <a href="contact.html" class="btn-primary px-10 py-4 rounded-xl text-lg shadow-lg">Let's Talk</a>
+    </div>
+
+    <section class="hero-sub pt-32 pb-16 px-6 md:px-12 text-center text-white">
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Privacy Policy</h1>
+        <p class="text-sm text-slate-400 font-medium uppercase tracking-widest">Last Updated: February 2026</p>
+    </section>
+
+    <section class="max-w-4xl mx-auto w-full px-6 py-16 flex-grow">
+        <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-sm border border-slate-100 legal-content">
+            <p>At Kore Digital, we are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.</p>
+            <h2>1. Information We Collect</h2>
+            <p>We collect Personal Identification Information (Name, email, phone) and Usage Data (IP address, browser type).</p>
+            <h2>2. How We Use Your Information</h2>
+            <p>We use this data to provide our services, communicate regarding quotes, and improve our website.</p>
+            <h2>3. Contact Us</h2>
+            <p><strong>Email:</strong> <a href="mailto:thekoredigital@gmail.com" class="text-[#5c67ff]">thekoredigital@gmail.com</a><br>
+            <strong>Phone:</strong> +91 86307 75289</p>
+        </div>
+    </section>
+
+    <footer class="bg-[#1c1c24] py-12 px-6 text-white mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-b border-white/10 pb-10 mb-10">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-11 h-11 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-[#5c67ff] font-black text-2xl md:text-3xl shadow-lg">K</div>
+                <span class="text-2xl md:text-[28px] font-extrabold text-white tracking-tight">Kore Digital</span>
+            </a>
+            <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-slate-300 font-semibold uppercase tracking-widest text-xs">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="about.html" class="hover:text-white transition">About Us</a>
+                <a href="index.html#services" class="hover:text-white transition">Services</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm font-semibold gap-4 text-center md:text-left">
+            <p>&copy; 2026. All rights reserved by Kore Digital.</p>
+            <div class="flex gap-6 uppercase tracking-widest text-xs">
+                <a href="privacy-policy.html" class="text-white transition">Privacy Policy</a>
+                <a href="terms-of-use.html" class="hover:text-white transition">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

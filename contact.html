@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Kore Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-900 flex flex-col min-h-screen">
+
+    <nav class="flex justify-between items-center px-6 md:px-12 py-5 absolute top-0 w-full z-50 bg-[#1c1c24]/90 backdrop-blur-md">
+        <a href="index.html" class="flex items-center gap-3 z-50">
+            <div class="w-11 h-11 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-[#5c67ff] font-black text-2xl md:text-3xl shadow-lg">K</div>
+            <span class="text-2xl md:text-[28px] font-extrabold text-white tracking-tight">Kore Digital</span>
+        </a>
+        <div class="hidden md:flex gap-8 font-semibold text-white/90 text-sm uppercase tracking-widest text-xs">
+            <a href="about.html" class="hover:text-[#5c67ff] transition">About Us</a>
+            <a href="index.html#services" class="hover:text-[#5c67ff] transition">Services</a>
+            <a href="contact.html" class="text-[#5c67ff] transition">Contact</a>
+        </div>
+        <a href="contact.html" class="hidden md:inline-block btn-primary px-8 py-3 rounded-xl font-bold text-sm shadow-lg">Let's Talk</a>
+        <button id="mobile-menu-btn" class="md:hidden text-white z-50"><i data-lucide="menu" class="w-8 h-8"></i></button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-[#1c1c24] z-40 hidden flex-col justify-center items-center gap-8 text-2xl font-bold text-white transition-opacity duration-300">
+        <a href="about.html" class="hover:text-[#5c67ff]">About Us</a>
+        <a href="index.html#services" class="hover:text-[#5c67ff]">Services</a>
+        <a href="contact.html" class="text-[#5c67ff]">Contact</a>
+        <a href="contact.html" class="btn-primary px-10 py-4 rounded-xl text-lg shadow-lg">Let's Talk</a>
+    </div>
+
+    <section class="hero-sub pt-32 pb-20 px-6 md:px-12 text-center text-white">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">Get In Touch</h1>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto font-medium">Ready to scale? Drop us a message and let's start building your digital future together.</p>
+    </section>
+
+    <section class="max-w-7xl mx-auto w-full px-6 md:px-12 py-20 flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            
+            <div class="order-2 lg:order-1">
+                <h2 class="text-3xl font-bold text-slate-900 mb-8 tracking-tight">Contact Information</h2>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-5">
+                        <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-500 shrink-0"><i data-lucide="phone"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Call Us</h3>
+                            <p class="text-slate-500 mt-1 leading-relaxed">We are available 24/7.<br> <a href="tel:+918630775289" class="hover:text-[#5c67ff] transition font-semibold">+91 86307 75289</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-500 shrink-0"><i data-lucide="mail"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Email Us</h3>
+                            <p class="text-slate-500 mt-1 leading-relaxed">Drop us a line anytime.<br> <a href="mailto:thekoredigital@gmail.com" class="hover:text-[#5c67ff] transition font-semibold">thekoredigital@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-slate-100 order-1 lg:order-2">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">Get a free quote now</h2>
+                
+                <form action="https://formspree.io/f/xykdlarb" method="POST" class="space-y-4">
+                    <input type="text" name="Full_Name" placeholder="Your Name" class="input-style" required>
+                    <input type="text" name="Business_Name" placeholder="Business Name" class="input-style">
+                    <input type="email" name="Email_Address" placeholder="Email Address" class="input-style" required>
+                    <input type="tel" name="Phone_Number" placeholder="Your Phone" class="input-style" required>
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Looking For</label>
+                        <select name="Service_Requested" class="input-style appearance-none bg-white cursor-pointer">
+                            <option value="Social Media Marketing">Social Media Marketing</option>
+                            <option value="Website Development">Website Development</option>
+                            <option value="SEO Strategy">SEO Strategy</option>
+                            <option value="Pay-per click Ads">Pay-per click Ads</option>
+                            <option value="Logo & Branding">Logo & Branding</option>
+                            <option value="Graphic/print design">Graphic/print design</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-bold mt-4 shadow-lg uppercase tracking-widest text-sm">Get Pricing now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1c1c24] py-12 px-6 text-white mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-b border-white/10 pb-10 mb-10">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-11 h-11 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-[#5c67ff] font-black text-2xl md:text-3xl shadow-lg">K</div>
+                <span class="text-2xl md:text-[28px] font-extrabold text-white tracking-tight">Kore Digital</span>
+            </a>
+            <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-slate-300 font-semibold uppercase tracking-widest text-xs">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="about.html" class="hover:text-white transition">About Us</a>
+                <a href="index.html#services" class="hover:text-white transition">Services</a>
+                <a href="contact.html" class="text-white transition">Contact</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm font-semibold gap-4 text-center md:text-left">
+            <p>&copy; 2026. All rights reserved by Kore Digital.</p>
+            <div class="flex gap-6 uppercase tracking-widest text-xs">
+                <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+                <a href="terms-of-use.html" class="hover:text-white transition">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

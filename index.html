@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kore Digital | Scale Your Business To The Kore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-slate-900 flex flex-col min-h-screen">
+
+    <nav class="flex justify-between items-center px-6 md:px-12 py-5 absolute top-0 w-full z-50 bg-transparent">
+        <a href="index.html" class="flex items-center gap-3 z-50">
+            <div class="w-11 h-11 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-[#5c67ff] font-black text-2xl md:text-3xl shadow-lg">K</div>
+            <span class="text-2xl md:text-[28px] font-extrabold text-white tracking-tight">Kore Digital</span>
+        </a>
+        <div class="hidden md:flex gap-8 font-semibold text-white/90 text-sm uppercase tracking-widest text-xs">
+            <a href="about.html" class="hover:text-[#5c67ff] transition">About Us</a>
+            <a href="index.html#services" class="hover:text-[#5c67ff] transition">Services</a>
+            <a href="contact.html" class="hover:text-[#5c67ff] transition">Contact</a>
+        </div>
+        <a href="contact.html" class="hidden md:inline-block btn-primary px-8 py-3 rounded-xl font-bold text-sm shadow-lg">Let's Talk</a>
+        <button id="mobile-menu-btn" class="md:hidden text-white z-50"><i data-lucide="menu" class="w-8 h-8"></i></button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-[#1c1c24] z-40 hidden flex-col justify-center items-center gap-8 text-2xl font-bold text-white transition-opacity duration-300">
+        <a href="about.html" class="hover:text-[#5c67ff]">About Us</a>
+        <a href="index.html#services" class="hover:text-[#5c67ff]" onclick="toggleMenu()">Services</a>
+        <a href="contact.html" class="hover:text-[#5c67ff]">Contact</a>
+        <a href="contact.html" class="btn-primary px-10 py-4 rounded-xl text-lg shadow-lg">Let's Talk</a>
+    </div>
+
+    <section class="hero-home flex items-center px-6 md:px-12 pt-28 pb-16">
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-white text-center lg:text-left">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight">
+                    Scale Your <br> Business To <br> <span class="text-[#5c67ff]">The Kore.</span>
+                </h1>
+                <p class="mt-6 text-base md:text-lg text-slate-300 max-w-lg mx-auto lg:mx-0 font-medium leading-relaxed">
+                    Strategic marketing and technical web development designed to build the absolute core of your digital identity.
+                </p>
+                <div class="mt-10 flex justify-center lg:justify-start gap-4">
+                    <a href="#services" class="bg-white text-slate-900 px-10 py-4 rounded-xl font-bold text-md hover:bg-slate-100 transition shadow-xl inline-block">Go Digital</a>
+                </div>
+            </div>
+
+            <div class="flex justify-center lg:justify-end">
+                <div class="bg-white p-8 md:p-10 rounded-[2rem] shadow-2xl w-full max-w-md">
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6 tracking-tight">Get a free quote</h2>
+                    <form action="https://formspree.io/f/xykdlarb" method="POST" class="space-y-4">
+                        <input type="text" name="Full_Name" placeholder="Your Name" class="input-style" required>
+                        <input type="text" name="Business_Name" placeholder="Business Name" class="input-style">
+                        <input type="email" name="Email_Address" placeholder="Email Address" class="input-style" required>
+                        <input type="tel" name="Phone_Number" placeholder="Your Phone" class="input-style" required>
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Looking For</label>
+                            <select name="Service_Requested" class="input-style appearance-none bg-white cursor-pointer">
+                                <option value="Social Media Marketing">Social Media Marketing</option>
+                                <option value="Website Development">Website Development</option>
+                                <option value="SEO Strategy">SEO Strategy</option>
+                                <option value="Pay-per click Ads">Pay-per click Ads</option>
+                                <option value="Logo & Branding">Logo & Branding</option>
+                                <option value="Graphic/print design">Graphic/print design</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-bold mt-4 shadow-lg uppercase tracking-widest text-sm">Get Pricing now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="max-w-7xl mx-auto px-6 py-20 md:py-24">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-3 tracking-tight">What We Can Do For You</h2>
+            <p class="text-[#5c67ff] text-base md:text-lg font-bold tracking-wide uppercase">Services we can help you with</p>
+            <div class="h-1.5 w-20 bg-[#5c67ff] rounded-full mx-auto mt-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div class="nexus-card p-8 md:p-10 min-h-[350px]">
+                <div>
+                    <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 text-[#5c67ff]"><i data-lucide="monitor"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Website Development</h3>
+                    <p class="text-slate-500 text-sm mb-5 leading-relaxed">Custom-built digital solutions tailored to your specific performance and management needs.</p>
+                </div>
+                <ul class="space-y-2 border-t pt-5">
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Hand-Coded (HTML/CSS/JS)</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> CMS (WordPress/Shopify)</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Lightning Fast Load</li>
+                </ul>
+            </div>
+             <div class="nexus-card p-8 md:p-10 min-h-[350px]">
+                <div>
+                    <div class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-6 text-pink-500"><i data-lucide="megaphone"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Social Media marketing</h3>
+                    <p class="text-slate-500 text-sm mb-5 leading-relaxed">Engage your audience where they live with creative content and data-driven campaigns.</p>
+                </div>
+                <ul class="space-y-2 border-t pt-5">
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Content Strategy</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Community Management</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Viral Growth</li>
+                </ul>
+            </div>
+            <div class="nexus-card p-8 md:p-10 min-h-[350px]">
+                <div>
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-500"><i data-lucide="bar-chart-3"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">SEO</h3>
+                    <p class="text-slate-500 text-sm mb-5 leading-relaxed">Be the first brand your customers see with our advanced search engine dominance strategies.</p>
+                </div>
+                <ul class="space-y-2 border-t pt-5">
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Technical & On-Page</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Keyword Analysis</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Authority Backlinks</li>
+                </ul>
+            </div>
+            <div class="nexus-card p-8 md:p-10 min-h-[350px]">
+                <div>
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 text-green-600"><i data-lucide="mouse-pointer-click"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Pay-per click</h3>
+                    <p class="text-slate-500 text-sm mb-5 leading-relaxed">Maximize your advertising spend with high-conversion Google and Meta ad funnels.</p>
+                </div>
+                <ul class="space-y-2 border-t pt-5">
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Google & Meta Ads</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Conversion Optimization</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Monthly ROI Reports</li>
+                </ul>
+            </div>
+            <div class="nexus-card p-8 md:p-10 min-h-[350px]">
+                <div>
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 text-purple-600"><i data-lucide="palette"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Logo & Branding</h3>
+                    <p class="text-slate-500 text-sm mb-5 leading-relaxed">Build a brand that stands the test of time with a unique and powerful visual identity.</p>
+                </div>
+                <ul class="space-y-2 border-t pt-5">
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Visual Identity</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Brand Guidelines</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Full Ecosystems</li>
+                </ul>
+            </div>
+            <div class="nexus-card p-8 md:p-10 min-h-[350px]">
+                <div>
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 text-orange-500"><i data-lucide="layers"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Graphic/print design</h3>
+                    <p class="text-slate-500 text-sm mb-5 leading-relaxed">From digital banners to physical brochures, we make your brand look stunning anywhere.</p>
+                </div>
+                <ul class="space-y-2 border-t pt-5">
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Social Assets</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Print-Ready Brochures</li>
+                    <li class="flex items-center gap-2 text-[11px] font-bold text-slate-600 uppercase tracking-wider"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Marketing Material</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-20 md:py-24 border-b border-slate-100">
+        <div class="text-center mb-16">
+            <p class="text-[#5c67ff] font-bold uppercase tracking-widest text-sm mb-2">Our Journey</p>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Important Stats</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+            <div><i data-lucide="smile" class="w-10 h-10 mx-auto text-[#5c67ff] mb-4"></i><h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-2">50+</h3><p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Satisfied Clients</p></div>
+            <div><i data-lucide="image" class="w-10 h-10 mx-auto text-[#5c67ff] mb-4"></i><h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-2">10K+</h3><p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Creatives Delivered</p></div>
+            <div><i data-lucide="layout" class="w-10 h-10 mx-auto text-[#5c67ff] mb-4"></i><h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-2">100+</h3><p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Websites Created</p></div>
+            <div><i data-lucide="trending-up" class="w-10 h-10 mx-auto text-[#5c67ff] mb-4"></i><h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-2">1M+</h3><p class="text-slate-500 font-bold uppercase tracking-widest text-xs">Revenue Generated</p></div>
+        </div>
+    </section>
+
+    <section class="bg-[#5c67ff] py-20 px-6 text-center text-white">
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6">Ready to scale to The Kore? <br> Lets Work Together.</h2>
+        <a href="contact.html" class="bg-white text-slate-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition shadow-xl mt-4 inline-block">Estimate Project</a>
+    </section>
+
+    <footer class="bg-[#1c1c24] py-12 px-6 text-white mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-b border-white/10 pb-10 mb-10">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-11 h-11 md:w-12 md:h-12 bg-white rounded-xl flex items-center justify-center text-[#5c67ff] font-black text-2xl md:text-3xl shadow-lg">K</div>
+                <span class="text-2xl md:text-[28px] font-extrabold text-white tracking-tight">Kore Digital</span>
+            </a>
+            <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-slate-300 font-semibold uppercase tracking-widest text-xs">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="about.html" class="hover:text-white transition">About Us</a>
+                <a href="index.html#services" class="hover:text-white transition">Services</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm font-semibold gap-4 text-center md:text-left">
+            <p>&copy; 2026. All rights reserved by Kore Digital.</p>
+            <div class="flex gap-6 uppercase tracking-widest text-xs">
+                <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+                <a href="terms-of-use.html" class="hover:text-white transition">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-8 right-8 z-50">
+        <a href="#" class="w-12 h-12 bg-[#5c67ff] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#4a54e1] transition"><i data-lucide="chevron-up" class="w-5 h-5"></i></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
