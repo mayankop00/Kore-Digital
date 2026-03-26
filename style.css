@@ -1,113 +1,90 @@
-/* =====================
-   Base Styles
-   ===================== */
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    overflow-x: hidden;
-    background-color: #f8f9fc;
+/* Base Styles */
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    overflow-x: hidden; 
+    background-color: #f8f9fc; 
 }
 
-/* =====================
-   Logo Color
-   ===================== */
-.kore-blue {
-    color: #5c67ff;
-}
-
-/* =====================
-   Hero Backgrounds
-   ===================== */
+/* Backgrounds for different pages */
 .hero-home {
     min-height: 100vh;
     background: linear-gradient(rgba(18, 18, 24, 0.85), rgba(18, 18, 24, 0.85)), url('hero-image.jpg');
-    background-size: cover;
+    background-size: cover; 
     background-position: center;
 }
 
 .hero-about {
     min-height: 70vh;
     background: linear-gradient(rgba(18, 18, 24, 0.9), rgba(18, 18, 24, 0.8)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920&auto=format&fit=crop');
-    background-size: cover;
+    background-size: cover; 
     background-position: center;
 }
 
 .hero-sub {
     background: linear-gradient(rgba(18, 18, 24, 0.95), rgba(18, 18, 24, 0.95)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1920&auto=format&fit=crop');
-    background-size: cover;
+    background-size: cover; 
     background-position: center;
 }
 
-/* =====================
-   Cards
-   ===================== */
-.nexus-card {
-    background-color: #f8f9fc;
-    border-radius: 2rem;
+/* UI Elements */
+.nexus-card { 
+    background-color: #f8f9fc; 
+    border-radius: 2rem; 
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid transparent;
-    display: flex;
-    flex-direction: column;
+    border: 1px solid transparent; 
+    display: flex; 
+    flex-direction: column; 
     justify-content: space-between;
 }
 
-.nexus-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    background-color: #ffffff;
-    border-color: #e2e8f0;
+.nexus-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); 
+    background-color: #ffffff; 
+    border-color: #e2e8f0; 
 }
 
-/* =====================
-   Form Inputs
-   ===================== */
 .input-style {
-    background-color: #f9fafb;
-    border: 1px solid #e5e7eb;
-    padding: 0.85rem 1rem;
+    background-color: #f9fafb; 
+    border: 1px solid #e5e7eb; 
+    padding: 0.85rem 1rem; 
     border-radius: 0.85rem;
-    width: 100%;
-    outline: none;
-    font-size: 0.875rem;
+    width: 100%; 
+    outline: none; 
+    font-size: 0.875rem; 
     transition: border-color 0.2s;
 }
 
-.input-style:focus {
-    border-color: #5c67ff;
+.input-style:focus { 
+    border-color: #5c67ff; 
 }
 
-/* =====================
-   Buttons
-   ===================== */
-.btn-primary {
-    background-color: #5c67ff;
-    color: white;
-    transition: background-color 0.3s;
+.btn-primary { 
+    background-color: #5c67ff; 
+    color: white; 
+    transition: background-color 0.3s; 
 }
 
-.btn-primary:hover {
-    background-color: #4a54e1;
+.btn-primary:hover { 
+    background-color: #4a54e1; 
 }
 
-/* =====================
-   Legal Page Typography
-   ===================== */
-.legal-content h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+/* Legal Page Typography */
+.legal-content h2 { 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    color: #0f172a; 
+    margin-top: 2rem; 
+    margin-bottom: 1rem; 
 }
-
-.legal-content p {
-    color: #64748b;
-    margin-bottom: 1rem;
-    line-height: 1.75;
+.legal-content p { 
+    color: #64748b; 
+    margin-bottom: 1rem; 
+    line-height: 1.75; 
 }
-
-.legal-content ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    color: #64748b;
-    margin-bottom: 1.5rem;
+.legal-content ul { 
+    list-style-type: disc; 
+    padding-left: 1.5rem; 
+    color: #64748b; 
+    margin-bottom: 1.5rem; 
 }
