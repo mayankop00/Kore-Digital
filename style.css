@@ -1,18 +1,39 @@
-/* Base Styles */
-body { 
-    font-family: 'Plus Jakarta Sans', sans-serif; 
-    overflow-x: hidden; 
-    background-color: #f8f9fc; 
+/* =========================================
+   style.css - The Kore Digital
+   ========================================= */
+
+/* Global Behaviors */
+html {
+    scroll-behavior: smooth;
 }
 
-/* Backgrounds for different pages */
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden; 
+    background-color: #f8fafc; 
+}
+
+/* === Hero Section Specifics === */
 .hero-home {
     min-height: 100vh;
+    /* Uses your local image with the dark slate overlay requested */
     background: linear-gradient(rgba(18, 18, 24, 0.85), rgba(18, 18, 24, 0.85)), url('hero-image.jpg');
     background-size: cover; 
     background-position: center;
 }
 
+/* Ensures the interactive canvas stays strictly in the background */
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Sub-page background classes (About, Contact) */
 .hero-about {
     min-height: 70vh;
     background: linear-gradient(rgba(18, 18, 24, 0.9), rgba(18, 18, 24, 0.8)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920&auto=format&fit=crop');
@@ -26,24 +47,7 @@ body {
     background-position: center;
 }
 
-/* UI Elements */
-.nexus-card { 
-    background-color: #f8f9fc; 
-    border-radius: 2rem; 
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid transparent; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between;
-}
-
-.nexus-card:hover { 
-    transform: translateY(-8px); 
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); 
-    background-color: #ffffff; 
-    border-color: #e2e8f0; 
-}
-
+/* UI Elements & Fallbacks */
 .input-style {
     background-color: #f9fafb; 
     border: 1px solid #e5e7eb; 
@@ -59,14 +63,9 @@ body {
     border-color: #5c67ff; 
 }
 
-.btn-primary { 
-    background-color: #5c67ff; 
-    color: white; 
-    transition: background-color 0.3s; 
-}
-
-.btn-primary:hover { 
-    background-color: #4a54e1; 
+/* Remove default input highlights */
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
 }
 
 /* Legal Page Typography */
@@ -87,4 +86,19 @@ body {
     padding-left: 1.5rem; 
     color: #64748b; 
     margin-bottom: 1.5rem; 
+}
+
+/* Premium Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5c67ff;
 }
