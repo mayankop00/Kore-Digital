@@ -86,7 +86,7 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50"></div>
                     <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-6 tracking-tight relative z-10">Get a free quote</h2>
                     
-                    <form action="https://formspree.io/f/xykdlarb" method="POST" class="space-y-4 relative z-10">
+                    <form id="contact-form" action="https://formspree.io/f/xykdlarb" method="POST" class="space-y-4 relative z-10">
                         <input type="text" name="Full_Name" placeholder="Your Name" class="w-full px-4 py-3.5 rounded-xl bg-white/95 border-0 focus:ring-2 focus:ring-brand transition-all text-slate-900 placeholder-slate-500 font-medium shadow-inner" required>
                         <input type="text" name="Business_Name" placeholder="Business Name" class="w-full px-4 py-3.5 rounded-xl bg-white/95 border-0 focus:ring-2 focus:ring-brand transition-all text-slate-900 placeholder-slate-500 font-medium shadow-inner">
                         <input type="email" name="Email_Address" placeholder="Email Address" class="w-full px-4 py-3.5 rounded-xl bg-white/95 border-0 focus:ring-2 focus:ring-brand transition-all text-slate-900 placeholder-slate-500 font-medium shadow-inner" required>
@@ -104,10 +104,18 @@
                             </select>
                         </div>
                         
-                        <button type="submit" class="w-full bg-brand hover:bg-brand-hover text-white py-4 rounded-xl font-bold mt-6 shadow-lg shadow-brand/40 uppercase tracking-widest text-sm transition-all duration-300 transform hover:-translate-y-0.5 border border-white/20">
+                        <button id="submit-btn" type="submit" class="w-full bg-brand hover:bg-brand-hover text-white py-4 rounded-xl font-bold mt-6 shadow-lg shadow-brand/40 uppercase tracking-widest text-sm transition-all duration-300 transform hover:-translate-y-0.5 border border-white/20">
                             Get Pricing Now
                         </button>
                     </form>
+
+                    <div id="form-success" class="hidden flex-col items-center justify-center text-center py-8 relative z-10 transition-all duration-500">
+                        <div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center text-green-400 mb-6 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
+                            <i data-lucide="check-circle" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-3xl font-extrabold text-white mb-3">Request Sent!</h3>
+                        <p class="text-slate-300 text-base font-medium">Thank you for reaching out. The Kore Digital team will get back to you with a free quote shortly.</p>
+                    </div>
                 </div>
             </div>
 
