@@ -1,5 +1,5 @@
 /* =========================================
-   style.css - The Kore Digital
+   style.css - Kore Digital
    ========================================= */
 
 /* Global Behaviors */
@@ -16,7 +16,7 @@ body {
 /* === Hero Section Specifics === */
 .hero-home {
     min-height: 100vh;
-    /* Uses your local image with the dark slate overlay requested */
+    /* Adds the black shade overlay back over your local image */
     background: linear-gradient(rgba(18, 18, 24, 0.85), rgba(18, 18, 24, 0.85)), url('hero-image.jpg');
     background-size: cover; 
     background-position: center;
