@@ -1,5 +1,5 @@
 // =========================================
-// script.js - The Kore Digital
+// script.js - Kore Digital
 // =========================================
 
 // 1. Initialize Lucide Icons
@@ -172,4 +172,55 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize and run
     initParticles();
     animateParticles();
+});
+
+// === 4. AJAX Form Submission & Success Message ===
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const successMessage = document.getElementById('form-success');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (form && successMessage && submitBtn) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault(); // Stop the page from redirecting
+            
+            // Change button to show loading state
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Hide the form
+                    form.classList.add('hidden');
+                    
+                    // Show the success message smoothly
+                    successMessage.classList.remove('hidden');
+                    successMessage.classList.add('flex');
+                    
+                    // Re-initialize Lucide icons for the new check-circle icon
+                    lucide.createIcons(); 
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please try again.');
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+                }
+            } catch (error) {
+                alert('Oops! There was a network error. Please try again.');
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+            }
+        });
+    }
 });
