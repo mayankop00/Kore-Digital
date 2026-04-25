@@ -20,7 +20,7 @@
                     colors: {
                         brand: '#5c67ff',
                         'brand-hover': '#4a54e1',
-                        dark: '#0f172a', // slate-900
+                        dark: '#0f172a',
                     }
                 }
             }
@@ -36,7 +36,7 @@
         </a>
         <div class="hidden md:flex gap-8 font-bold text-white/90 uppercase tracking-widest text-xs">
             <a href="about.html" class="hover:text-brand transition-colors duration-300">About Us</a>
-            <a href="index.html#services" class="hover:text-brand transition-colors duration-300">Services</a>
+            <a href="#services" class="hover:text-brand transition-colors duration-300">Services</a>
             <a href="contact.html" class="hover:text-brand transition-colors duration-300">Contact</a>
         </div>
         <a href="contact.html" class="hidden md:inline-block bg-brand hover:bg-brand-hover text-white px-8 py-3 rounded-xl font-bold text-sm shadow-[0_4px_20px_rgba(92,103,255,0.3)] hover:shadow-[0_6px_25px_rgba(92,103,255,0.5)] transition-all duration-300 transform hover:-translate-y-0.5">
@@ -49,47 +49,52 @@
 
     <div id="mobile-menu" class="fixed inset-0 bg-[#1c1c24]/95 backdrop-blur-md z-40 hidden flex-col justify-center items-center gap-8 text-2xl font-bold text-white transition-opacity duration-300">
         <a href="about.html" class="hover:text-brand transition-colors">About Us</a>
-        <a href="index.html#services" class="hover:text-brand transition-colors" onclick="toggleMenu()">Services</a>
+        <a href="#services" class="hover:text-brand transition-colors" onclick="toggleMenu()">Services</a>
         <a href="contact.html" class="hover:text-brand transition-colors">Contact</a>
         <a href="contact.html" class="bg-brand text-white px-10 py-4 rounded-xl text-lg shadow-lg mt-4">Let's Talk</a>
     </div>
 
-    <section class="hero-home relative flex items-center px-6 md:px-12 pt-32 pb-20 bg-dark overflow-hidden">
+    <section class="hero-home relative flex items-center px-6 md:px-12 pt-32 pb-20 overflow-hidden">
         
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand/20 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3 z-0"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none -translate-x-1/3 translate-y-1/3 z-0"></div>
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand/30 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3 z-0"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[100px] pointer-events-none -translate-x-1/3 translate-y-1/3 z-0"></div>
+
+        <canvas id="hero-canvas" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
 
         <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center relative z-10 pointer-events-none">
+            
             <div class="text-white text-center lg:text-left pointer-events-auto">
-                <div class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-white/10 bg-white/5 text-slate-300 text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
-                    <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+                <div class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-white/20 bg-white/10 text-white text-xs font-bold uppercase tracking-widest backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-brand animate-pulse shadow-[0_0_10px_#5c67ff]"></span>
                     Digital Excellence
                 </div>
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight">
-                    Scale Your <br> Business To <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-purple-400">The Kore.</span>
+                    Scale Your <br> Business To <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8b93ff] to-purple-300 drop-shadow-lg">The Kore.</span>
                 </h1>
-                <p class="mt-6 text-base md:text-lg text-slate-400 max-w-lg mx-auto lg:mx-0 font-medium leading-relaxed">
+                <p class="mt-6 text-base md:text-lg text-slate-200 max-w-lg mx-auto lg:mx-0 font-medium leading-relaxed drop-shadow-md">
                     Strategic marketing and technical web development designed to build the absolute core of your digital identity.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                    <a href="#services" class="bg-white text-dark px-10 py-4 rounded-xl font-bold text-md hover:bg-slate-100 shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 transform hover:-translate-y-1 text-center">
+                    <a href="#services" class="bg-white text-dark px-10 py-4 rounded-xl font-bold text-md hover:bg-slate-100 shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300 transform hover:-translate-y-1 text-center">
                         Go Digital
                     </a>
                 </div>
             </div>
 
             <div class="flex justify-center lg:justify-end pointer-events-auto">
-                <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-10 rounded-[2rem] shadow-2xl w-full max-w-md relative overflow-hidden">
+                <div class="bg-white/10 backdrop-blur-xl border border-white/30 p-8 md:p-10 rounded-[2rem] shadow-2xl w-full max-w-md relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50"></div>
                     <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-6 tracking-tight relative z-10">Get a free quote</h2>
                     
                     <form id="contact-form" action="https://formspree.io/f/xykdlarb" method="POST" class="space-y-4 relative z-10">
-                        <input type="text" name="Full_Name" placeholder="Your Name" class="w-full px-4 py-3.5 rounded-xl bg-white/90 border-0 focus:ring-2 focus:ring-brand focus:bg-white transition-all text-slate-900 placeholder-slate-500 font-medium" required>
-                        <input type="text" name="Business_Name" placeholder="Business Name" class="w-full px-4 py-3.5 rounded-xl bg-white/90 border-0 focus:ring-2 focus:ring-brand focus:bg-white transition-all text-slate-900 placeholder-slate-500 font-medium">
-                        <input type="email" name="Email_Address" placeholder="Email Address" class="w-full px-4 py-3.5 rounded-xl bg-white/90 border-0 focus:ring-2 focus:ring-brand focus:bg-white transition-all text-slate-900 placeholder-slate-500 font-medium" required>
-                        <input type="tel" name="Phone_Number" placeholder="Your Phone" class="w-full px-4 py-3.5 rounded-xl bg-white/90 border-0 focus:ring-2 focus:ring-brand focus:bg-white transition-all text-slate-900 placeholder-slate-500 font-medium" required>
+                        <input type="text" name="Full_Name" placeholder="Your Name" class="w-full px-4 py-3.5 rounded-xl bg-white/95 border-0 focus:ring-2 focus:ring-brand transition-all text-slate-900 placeholder-slate-500 font-medium shadow-inner" required>
+                        <input type="text" name="Business_Name" placeholder="Business Name" class="w-full px-4 py-3.5 rounded-xl bg-white/95 border-0 focus:ring-2 focus:ring-brand transition-all text-slate-900 placeholder-slate-500 font-medium shadow-inner">
+                        <input type="email" name="Email_Address" placeholder="Email Address" class="w-full px-4 py-3.5 rounded-xl bg-white/95 border-0 focus:ring-2 focus:ring-brand transition-all text-slate-900 placeholder-slate-500 font-medium shadow-inner" required>
+                        <input type="tel" name="Phone_Number" placeholder="Your Phone" class="w-full px-4 py-3.5 rounded-xl bg-white/95 border-0 focus:ring-2 focus:ring-brand transition-all text-slate-900 placeholder-slate-500 font-medium shadow-inner" required>
+                        
                         <div class="space-y-1.5 mt-2">
-                            <label class="text-xs font-bold text-slate-300 uppercase tracking-widest ml-1">Looking For</label>
-                            <select name="Service_Requested" class="w-full px-4 py-3.5 rounded-xl bg-white/90 border-0 focus:ring-2 focus:ring-brand focus:bg-white transition-all text-slate-900 font-medium cursor-pointer appearance-none">
+                            <label class="text-xs font-bold text-white/90 uppercase tracking-widest ml-1 drop-shadow-sm">Looking For</label>
+                            <select name="Service_Requested" class="w-full px-4 py-3.5 rounded-xl bg-white/95 border-0 focus:ring-2 focus:ring-brand transition-all text-slate-900 font-medium cursor-pointer appearance-none shadow-inner">
                                 <option value="Website Development">Website Development</option>
                                 <option value="Social Media marketing">Social Media marketing</option>
                                 <option value="SEO">SEO</option>
@@ -98,7 +103,8 @@
                                 <option value="Graphic/print design">Graphic/print design</option>
                             </select>
                         </div>
-                        <button id="submit-btn" type="submit" class="w-full bg-brand hover:bg-brand-hover text-white py-4 rounded-xl font-bold mt-6 shadow-lg hover:shadow-brand/40 uppercase tracking-widest text-sm transition-all duration-300 transform hover:-translate-y-0.5">
+                        
+                        <button id="submit-btn" type="submit" class="w-full bg-brand hover:bg-brand-hover text-white py-4 rounded-xl font-bold mt-6 shadow-lg shadow-brand/40 uppercase tracking-widest text-sm transition-all duration-300 transform hover:-translate-y-0.5 border border-white/20">
                             Get Pricing Now
                         </button>
                     </form>
@@ -110,9 +116,9 @@
                         <h3 class="text-3xl font-extrabold text-white mb-3">Request Sent!</h3>
                         <p class="text-slate-300 text-base font-medium">Thank you for reaching out. The team at Kore Digital will get back to you with a free quote shortly.</p>
                     </div>
-
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -279,208 +285,7 @@
         </a>
     </div>
 
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+    <script src="script.js"></script>
 
-        // Mobile Menu Toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            if(menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                menu.classList.add('flex');
-            } else {
-                menu.classList.add('hidden');
-                menu.classList.remove('flex');
-            }
-        });
-        function toggleMenu() {
-            document.getElementById('mobile-menu').classList.add('hidden');
-            document.getElementById('mobile-menu').classList.remove('flex');
-        }
-
-        // === Anti-Gravity Interactive Hero Animation ===
-        document.addEventListener('DOMContentLoaded', () => {
-            const heroSection = document.querySelector('.hero-home');
-            if (!heroSection) return;
-
-            // Create canvas and inject it
-            const canvas = document.createElement('canvas');
-            canvas.className = 'absolute inset-0 w-full h-full z-0 pointer-events-none';
-            heroSection.insertBefore(canvas, heroSection.firstChild);
-            
-            const ctx = canvas.getContext('2d');
-            let particlesArray = [];
-            let hw = window.innerWidth;
-            let hh = heroSection.offsetHeight;
-            
-            // Mouse Interaction Setup
-            let mouse = { x: null, y: null, radius: 150 };
-            heroSection.addEventListener('mousemove', function(event) {
-                const rect = heroSection.getBoundingClientRect();
-                mouse.x = event.clientX - rect.left;
-                mouse.y = event.clientY - rect.top;
-            });
-            heroSection.addEventListener('mouseleave', function() {
-                mouse.x = null;
-                mouse.y = null;
-            });
-
-            // Handle Resize
-            window.addEventListener('resize', function() {
-                hw = window.innerWidth;
-                hh = heroSection.offsetHeight;
-                canvas.width = hw;
-                canvas.height = hh;
-                initParticles();
-            });
-
-            // Physics Particle Class
-            class FloatingShape {
-                constructor() {
-                    this.x = Math.random() * hw;
-                    this.y = Math.random() * hh;
-                    this.size = Math.random() * 6 + 3; 
-                    
-                    // Anti-gravity: moving UP and slightly drifting sideways
-                    this.speedX = (Math.random() - 0.5) * 0.5;
-                    this.speedY = Math.random() * -1.2 - 0.2; // Negative Y is up
-                    
-                    this.color = ['#5c67ff', '#a855f7', '#38bdf8', '#ffffff'][Math.floor(Math.random() * 4)];
-                    this.opacity = Math.random() * 0.4 + 0.1;
-                    
-                    this.type = Math.floor(Math.random() * 3); // 0: filled, 1: hollow, 2: plus
-                    this.rotation = Math.random() * 360;
-                    this.rotationSpeed = (Math.random() - 0.5) * 1.5;
-                }
-
-                draw() {
-                    ctx.save();
-                    ctx.translate(this.x, this.y);
-                    ctx.rotate(this.rotation * Math.PI / 180);
-                    ctx.globalAlpha = this.opacity;
-                    ctx.strokeStyle = this.color;
-                    ctx.fillStyle = this.color;
-                    ctx.lineWidth = 1.5;
-                    
-                    ctx.beginPath();
-                    if (this.type === 0) { // Filled orb
-                        ctx.arc(0, 0, this.size / 1.5, 0, Math.PI * 2);
-                        ctx.fill();
-                    } else if (this.type === 1) { // Hollow ring
-                        ctx.arc(0, 0, this.size, 0, Math.PI * 2);
-                        ctx.stroke();
-                    } else if (this.type === 2) { // Plus sign
-                        ctx.moveTo(-this.size, 0);
-                        ctx.lineTo(this.size, 0);
-                        ctx.moveTo(0, -this.size);
-                        ctx.lineTo(0, this.size);
-                        ctx.stroke();
-                    }
-                    ctx.restore();
-                }
-
-                update() {
-                    this.x += this.speedX;
-                    this.y += this.speedY;
-                    this.rotation += this.rotationSpeed;
-
-                    // Reset when floating out of the top bounds
-                    if (this.y < 0 - this.size * 2) {
-                        this.y = hh + this.size * 2;
-                        this.x = Math.random() * hw;
-                    }
-                    // Wrap horizontally
-                    if (this.x < 0 - this.size * 2) this.x = hw + this.size * 2;
-                    if (this.x > hw + this.size * 2) this.x = 0 - this.size * 2;
-
-                    // Interactive Mouse Repulsion
-                    if (mouse.x != null) {
-                        let dx = mouse.x - this.x;
-                        let dy = mouse.y - this.y;
-                        let distance = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (distance < mouse.radius) {
-                            const forceDirectionX = dx / distance;
-                            const forceDirectionY = dy / distance;
-                            const force = (mouse.radius - distance) / mouse.radius;
-                            
-                            // Push shapes away gently
-                            this.x -= forceDirectionX * force * 2.5;
-                            this.y -= forceDirectionY * force * 2.5;
-                        }
-                    }
-                    this.draw();
-                }
-            }
-
-            function initParticles() {
-                canvas.width = hw;
-                canvas.height = hh;
-                particlesArray = [];
-                // Adjust density based on screen size
-                const numParticles = window.innerWidth < 768 ? 25 : 60;
-                for (let i = 0; i < numParticles; i++) {
-                    particlesArray.push(new FloatingShape());
-                }
-            }
-
-            function animateParticles() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                for (let i = 0; i < particlesArray.length; i++) {
-                    particlesArray[i].update();
-                }
-                requestAnimationFrame(animateParticles);
-            }
-
-            initParticles();
-            animateParticles();
-        });
-
-        // === Form AJAX Submission ===
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('contact-form');
-            const successMessage = document.getElementById('form-success');
-            const submitBtn = document.getElementById('submit-btn');
-
-            if (form && successMessage && submitBtn) {
-                form.addEventListener('submit', async function(e) {
-                    e.preventDefault(); 
-                    
-                    const originalBtnText = submitBtn.innerHTML;
-                    submitBtn.innerHTML = 'Sending...';
-                    submitBtn.disabled = true;
-                    submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
-
-                    try {
-                        const response = await fetch(form.action, {
-                            method: 'POST',
-                            body: new FormData(form),
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        });
-
-                        if (response.ok) {
-                            form.classList.add('hidden');
-                            successMessage.classList.remove('hidden');
-                            successMessage.classList.add('flex');
-                            lucide.createIcons(); 
-                        } else {
-                            alert('Oops! There was a problem submitting your form. Please try again.');
-                            submitBtn.innerHTML = originalBtnText;
-                            submitBtn.disabled = false;
-                            submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
-                        }
-                    } catch (error) {
-                        alert('Oops! There was a network error. Please try again.');
-                        submitBtn.innerHTML = originalBtnText;
-                        submitBtn.disabled = false;
-                        submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 </html>
