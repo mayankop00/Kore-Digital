@@ -3,111 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Kore Digital</title>
+    <title>Contact Us | The Kore Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: '#5c67ff',
+                        'brand-hover': '#4a54e1',
+                        dark: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="text-slate-900 flex flex-col min-h-screen">
+<body class="text-slate-900 flex flex-col min-h-screen font-sans antialiased selection:bg-brand selection:text-white bg-slate-50">
 
-    <nav class="flex justify-between items-center px-6 md:px-12 py-5 absolute top-0 w-full z-50 bg-[#1c1c24]/90 backdrop-blur-md">
-        <a href="index.html" class="flex items-center gap-3 z-50">
-            <img src="logo.png" alt="Kore Digital Logo" class="w-11 h-11 md:w-12 md:h-12 object-contain bg-white rounded-xl p-1 shadow-lg">
-            <span class="text-2xl md:text-[28px] font-extrabold text-white tracking-tight">Kore Digital</span>
+    <nav class="flex justify-between items-center px-6 md:px-12 py-5 absolute top-0 w-full z-50 bg-[#1c1c24]/90 backdrop-blur-md border-b border-white/10">
+        <a href="index.html" class="flex items-center gap-3 z-50 group">
+            <img src="logo.png" alt="The Kore Digital Logo" class="w-11 h-11 md:w-12 md:h-12 object-contain bg-white rounded-xl p-1 shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <span class="text-2xl md:text-[28px] font-extrabold text-white tracking-tight">The Kore Digital</span>
         </a>
-        <div class="hidden md:flex gap-8 font-semibold text-white/90 text-sm uppercase tracking-widest text-xs">
-            <a href="about.html" class="hover:text-[#5c67ff] transition">About Us</a>
-            <a href="index.html#services" class="hover:text-[#5c67ff] transition">Services</a>
-            <a href="contact.html" class="text-[#5c67ff] transition">Contact</a>
+        <div class="hidden md:flex gap-8 font-bold text-white/90 uppercase tracking-widest text-xs">
+            <a href="about.html" class="hover:text-brand transition-colors duration-300">About Us</a>
+            <a href="index.html#services" class="hover:text-brand transition-colors duration-300">Services</a>
+            <a href="contact.html" class="text-brand transition-colors duration-300">Contact</a>
         </div>
-        <a href="contact.html" class="hidden md:inline-block btn-primary px-8 py-3 rounded-xl font-bold text-sm shadow-lg">Let's Talk</a>
-        <button id="mobile-menu-btn" class="md:hidden text-white z-50"><i data-lucide="menu" class="w-8 h-8"></i></button>
+        <a href="contact.html" class="hidden md:inline-block bg-brand hover:bg-brand-hover text-white px-8 py-3 rounded-xl font-bold text-sm shadow-[0_4px_20px_rgba(92,103,255,0.3)] hover:shadow-[0_6px_25px_rgba(92,103,255,0.5)] transition-all duration-300 transform hover:-translate-y-0.5">
+            Let's Talk
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-white z-50 hover:text-brand transition-colors">
+            <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-[#1c1c24] z-40 hidden flex-col justify-center items-center gap-8 text-2xl font-bold text-white transition-opacity duration-300">
-        <a href="about.html" class="hover:text-[#5c67ff]">About Us</a>
-        <a href="index.html#services" class="hover:text-[#5c67ff]">Services</a>
-        <a href="contact.html" class="text-[#5c67ff]">Contact</a>
-        <a href="contact.html" class="btn-primary px-10 py-4 rounded-xl text-lg shadow-lg">Let's Talk</a>
+    <div id="mobile-menu" class="fixed inset-0 bg-[#1c1c24]/95 backdrop-blur-md z-40 hidden flex-col justify-center items-center gap-8 text-2xl font-bold text-white transition-opacity duration-300">
+        <a href="about.html" class="hover:text-brand transition-colors">About Us</a>
+        <a href="index.html#services" class="hover:text-brand transition-colors" onclick="toggleMenu()">Services</a>
+        <a href="contact.html" class="text-brand transition-colors">Contact</a>
+        <a href="contact.html" class="bg-brand text-white px-10 py-4 rounded-xl text-lg shadow-lg mt-4">Let's Talk</a>
     </div>
 
-    <section class="hero-sub pt-32 pb-20 px-6 md:px-12 text-center text-white">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">Get In Touch</h1>
-        <p class="text-lg text-slate-300 max-w-2xl mx-auto font-medium">Ready to scale? Drop us a message and let's start building your digital future together.</p>
+    <section class="hero-sub pt-32 pb-20 px-6 md:px-12 text-center text-white relative">
+        <div class="absolute inset-0 bg-dark/60 z-0 pointer-events-none"></div>
+        <div class="relative z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">Get In Touch</h1>
+            <p class="text-lg text-slate-200 max-w-2xl mx-auto font-medium">Ready to scale? Drop us a message and let's start building your digital future together.</p>
+        </div>
     </section>
 
-    <section class="max-w-7xl mx-auto w-full px-6 md:px-12 py-20 flex-grow">
+    <section class="max-w-7xl mx-auto w-full px-6 md:px-12 py-20 flex-grow relative z-20 -mt-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             
-            <div class="order-2 lg:order-1">
-                <h2 class="text-3xl font-bold text-slate-900 mb-8 tracking-tight">Contact Information</h2>
+            <div class="order-2 lg:order-1 lg:pt-10">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-8 tracking-tight">Contact Information</h2>
                 <div class="space-y-8">
-                    <div class="flex items-start gap-5">
-                        <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-500 shrink-0"><i data-lucide="phone"></i></div>
+                    <div class="flex items-start gap-5 group">
+                        <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-500 shrink-0 group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300 shadow-sm"><i data-lucide="phone"></i></div>
                         <div>
                             <h3 class="text-lg font-bold text-slate-900">Call Us</h3>
-                            <p class="text-slate-500 mt-1 leading-relaxed">We are available 24/7.<br> <a href="tel:+918630775289" class="hover:text-[#5c67ff] transition font-semibold">+91 86307 75289</a></p>
+                            <p class="text-slate-500 mt-1 leading-relaxed font-medium">We are available 24/7.<br> <a href="tel:+918630775289" class="text-slate-900 hover:text-brand transition-colors font-bold">+91 86307 75289</a></p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-5">
-                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-500 shrink-0"><i data-lucide="mail"></i></div>
+                    <div class="flex items-start gap-5 group">
+                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-500 shrink-0 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 shadow-sm"><i data-lucide="mail"></i></div>
                         <div>
                             <h3 class="text-lg font-bold text-slate-900">Email Us</h3>
-                            <p class="text-slate-500 mt-1 leading-relaxed">Drop us a line anytime.<br> <a href="mailto:thekoredigital@gmail.com" class="hover:text-[#5c67ff] transition font-semibold">thekoredigital@gmail.com</a></p>
+                            <p class="text-slate-500 mt-1 leading-relaxed font-medium">Drop us a line anytime.<br> <a href="mailto:thekoredigital@gmail.com" class="text-slate-900 hover:text-brand transition-colors font-bold">thekoredigital@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-slate-100 order-1 lg:order-2">
+            <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-slate-100 order-1 lg:order-2">
                 <h2 class="text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">Get a free quote now</h2>
                 
-                <form action="https://formspree.io/f/xykdlarb" method="POST" class="space-y-4">
+                <form id="contact-form" action="https://formspree.io/f/xykdlarb" method="POST" class="space-y-4">
                     <input type="text" name="Full_Name" placeholder="Your Name" class="input-style" required>
                     <input type="text" name="Business_Name" placeholder="Business Name" class="input-style">
                     <input type="email" name="Email_Address" placeholder="Email Address" class="input-style" required>
                     <input type="tel" name="Phone_Number" placeholder="Your Phone" class="input-style" required>
-                    <div class="space-y-1">
+                    
+                    <div class="space-y-1.5 mt-2">
                         <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Looking For</label>
-                        <select name="Service_Requested" class="input-style appearance-none bg-white cursor-pointer">
-                            <option value="Social Media Marketing">Social Media Marketing</option>
+                        <select name="Service_Requested" class="input-style appearance-none bg-[#f9fafb] cursor-pointer">
                             <option value="Website Development">Website Development</option>
-                            <option value="SEO Strategy">SEO Strategy</option>
-                            <option value="Pay-per click Ads">Pay-per click Ads</option>
+                            <option value="Social Media marketing">Social Media marketing</option>
+                            <option value="SEO">SEO</option>
+                            <option value="Pay-per click">Pay-per click</option>
                             <option value="Logo & Branding">Logo & Branding</option>
                             <option value="Graphic/print design">Graphic/print design</option>
                         </select>
                     </div>
-                    <button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-bold mt-4 shadow-lg uppercase tracking-widest text-sm">Get Pricing now</button>
+                    
+                    <button id="submit-btn" type="submit" class="w-full bg-brand hover:bg-brand-hover text-white py-4 rounded-xl font-bold mt-6 shadow-lg shadow-brand/30 uppercase tracking-widest text-sm transition-all duration-300 transform hover:-translate-y-0.5">
+                        Get Pricing now
+                    </button>
                 </form>
+
+                <div id="form-success" class="hidden flex-col items-center justify-center text-center py-10 transition-all duration-500">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-500 mb-6 shadow-sm">
+                        <i data-lucide="check-circle" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mb-3 tracking-tight">Request Sent!</h3>
+                    <p class="text-slate-500 text-base font-medium leading-relaxed">Thank you for reaching out. The Kore Digital team will get back to you with a free quote shortly.</p>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <footer class="bg-[#1c1c24] py-12 px-6 text-white mt-auto">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-b border-white/10 pb-10 mb-10">
-            <a href="index.html" class="flex items-center gap-3">
-                <img src="logo.png" alt="Kore Digital Logo" class="w-11 h-11 md:w-12 md:h-12 object-contain bg-white rounded-xl p-1 shadow-lg">
-                <span class="text-2xl md:text-[28px] font-extrabold text-white tracking-tight">Kore Digital</span>
+    <footer class="bg-[#0f172a] py-16 px-6 text-white mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/10 pb-12 mb-8">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="logo.png" alt="The Kore Digital Logo" class="w-11 h-11 md:w-12 md:h-12 object-contain bg-white rounded-xl p-1 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <span class="text-2xl md:text-[28px] font-extrabold text-white tracking-tight">The Kore Digital</span>
             </a>
-            <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-slate-300 font-semibold uppercase tracking-widest text-xs">
-                <a href="index.html" class="hover:text-white transition">Home</a>
-                <a href="about.html" class="hover:text-white transition">About Us</a>
-                <a href="index.html#services" class="hover:text-white transition">Services</a>
-                <a href="contact.html" class="text-white transition">Contact</a>
+            <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-slate-400 font-bold uppercase tracking-widest text-xs">
+                <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
+                <a href="about.html" class="hover:text-white transition-colors duration-300">About Us</a>
+                <a href="index.html#services" class="hover:text-white transition-colors duration-300">Services</a>
+                <a href="contact.html" class="text-white transition-colors duration-300">Contact</a>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm font-semibold gap-4 text-center md:text-left">
-            <p>&copy; 2026. All rights reserved by Kore Digital.</p>
-            <div class="flex gap-6 uppercase tracking-widest text-xs">
-                <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
-                <a href="terms-of-use.html" class="hover:text-white transition">Terms of Use</a>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm font-medium gap-4 text-center md:text-left">
+            <p>&copy; 2026. All rights reserved by The Kore Digital.</p>
+            <div class="flex gap-6 uppercase tracking-widest text-xs font-bold">
+                <a href="privacy-policy.html" class="hover:text-slate-300 transition-colors duration-300">Privacy Policy</a>
+                <a href="terms-of-use.html" class="hover:text-slate-300 transition-colors duration-300">Terms of Use</a>
             </div>
         </div>
     </footer>
 
+    <div class="fixed bottom-8 right-8 z-50">
+        <a href="#" class="w-14 h-14 bg-brand text-white rounded-2xl flex items-center justify-center shadow-[0_8px_25px_rgba(92,103,255,0.4)] hover:bg-brand-hover hover:shadow-[0_12px_30px_rgba(92,103,255,0.6)] hover:-translate-y-1 transition-all duration-300">
+            <i data-lucide="chevron-up" class="w-6 h-6"></i>
+        </a>
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
